@@ -25,10 +25,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Configurar o GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Preparar arquivos do site
+        run: |
+          mkdir -p dist
+          cp index.html .nojekyll dist/
+          cp -R media dist/media
       - name: Enviar os arquivos estáticos
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site
+          path: ./dist
       - name: Publicar no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

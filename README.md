@@ -1,5 +1,5 @@
 # Portfólio de João Henrique Ferreira
 
-Site estático publicado em [https://j-ferre1ra.github.io/](https://j-ferre1ra.github.io/) pelo GitHub Actions.
+Portfólio profissional publicado no [GitHub Pages](https://j-ferre1ra.github.io/).
 
-Os arquivos publicados ficam em `site/`. Para atualizar o portfólio, edite `site/index.html` e os arquivos de `site/media/`, depois envie as alterações para `main`.
+O site é estático e funciona no GitHub Pages. Edite `index.html` e `media/`; ao enviar alterações para `main`, o GitHub Actions prepara e publica o site automaticamente.
