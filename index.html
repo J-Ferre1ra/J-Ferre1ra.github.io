@@ -4,13 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f7f2">
-  <meta name="description" content="Portfólio de João Henrique Ferreira — desenvolvedor full stack com foco em interfaces claras e aplicações úteis.">
+  <meta name="description" content="Portfólio de João Henrique Ferreira, desenvolvedor Front-End Júnior com React, TypeScript e integração com APIs REST. Conheça projetos e experiência prática em desenvolvimento web.">
   <link rel="canonical" href="https://j-ferre1ra.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://j-ferre1ra.github.io/">
-  <meta property="og:title" content="João Henrique Ferreira · Desenvolvedor Full Stack">
-  <meta property="og:description" content="Interfaces intuitivas, sistemas completos e projetos reais. Conheça o trabalho de João Henrique Ferreira.">
-  <title>João Henrique Ferreira · Desenvolvedor Full Stack</title>
+  <meta property="og:site_name" content="João Henrique Ferreira · Portfólio">
+  <meta property="og:title" content="João Henrique Ferreira | Desenvolvedor Front-End Júnior">
+  <meta property="og:description" content="React, TypeScript e interfaces integradas a APIs REST. Veja projetos, experiência e demonstrações.">
+  <meta property="og:image" content="https://j-ferre1ra.github.io/media/og-portfolio.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="João Henrique Ferreira, desenvolvedor Front-End Júnior. React, TypeScript e APIs REST.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="João Henrique Ferreira | Desenvolvedor Front-End Júnior">
+  <meta name="twitter:description" content="React, TypeScript e interfaces integradas a APIs REST. Veja projetos, experiência e demonstrações.">
+  <meta name="twitter:image" content="https://j-ferre1ra.github.io/media/og-portfolio.png">
+  <title>João Henrique Ferreira | Desenvolvedor Front-End Júnior</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%2376b7ff'/%3E%3Cpath d='M13 11h14v4H17v6h8v4h-8v6h-4z' fill='%23102b49'/%3E%3C/svg%3E">
   <style>
     :root{color-scheme:light;--bg:#f6f7f2;--surface:#fff;--ink:#1c241b;--muted:#687067;--line:#dfe4da;--accent:#76b7ff;--accent-strong:#1f5eaa;--accent-ink:#102b49;--soft:#eef1e9;--shadow:0 18px 60px rgba(24,34,22,.07);--mono:'SFMono-Regular',Consolas,'Liberation Mono',monospace;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
@@ -92,13 +102,31 @@ body{line-height:1.65} .lead{font-size:18px} .section-note,.project-body p,.abou
 <style>
 .project-visual{height:auto;aspect-ratio:16/9}.project-visual .project-demo{width:100%;height:100%;display:block;object-fit:cover;object-position:center;background:#0b1420}.contact-actions .outline{background:transparent;color:var(--bg)}@media(max-width:420px){.project-visual{aspect-ratio:4/3}}
 </style>
+<style>
+  .actions{flex-wrap:wrap}
+  .button-secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .button-secondary:hover{background:var(--soft);opacity:1}
+  .about-heading{font-size:clamp(28px,3.4vw,38px);margin:0;max-width:390px}
+  .experience-intro{font-size:16px;line-height:1.7;color:var(--muted);margin:0 0 22px}
+  .experience-list{display:grid;gap:20px}
+  .experience-item{border-top:1px solid var(--line);padding-top:18px}
+  .experience-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+  .experience-heading h3{font-size:19px;line-height:1.25;letter-spacing:-.035em;margin:0;font-weight:650}
+  .experience-heading .experience-dates{font:12px var(--mono);color:var(--muted);white-space:nowrap;padding-top:3px}
+  .experience-item p{font-size:14px;line-height:1.7;color:var(--muted);margin:10px 0 12px}
+  .experience-item .tags{margin-top:10px}
+  .project-actions{flex-wrap:wrap}
+  @media(max-width:760px){.about-heading{max-width:none}.experience-heading{flex-direction:column;gap:6px}.experience-heading .experience-dates{white-space:normal}}
+  @media(max-width:760px){.links a:nth-child(2){display:inline-flex}.links{gap:12px}}
+  @media(max-width:420px){.links a:nth-child(3){display:inline-flex}.links{gap:8px;font-size:11px}.nav-right{gap:8px}.theme{width:32px;height:32px}}
+</style>
 </head>
 <body>
   <header class="topbar">
     <nav class="nav wrap" aria-label="Navegação principal">
       <a class="brand" href="#inicio" aria-label="João Henrique Ferreira, início"><span class="mark">J.</span><span>João Ferreira</span></a>
       <div class="nav-right">
-        <div class="links"><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></div>
+        <div class="links"><a href="#projetos">Projetos</a><a href="#sobre">Experiência</a><a href="#contato">Contato</a></div>
         <button class="theme" id="themeToggle" type="button" aria-label="Ativar tema escuro" title="Alternar tema"><span aria-hidden="true">◐</span></button>
       </div>
     </nav>
@@ -106,11 +134,11 @@ body{line-height:1.65} .lead{font-size:18px} .section-note,.project-body p,.abou
   <main id="inicio">
     <div class="wrap hero">
       <div class="reveal">
-        <div class="intro-label"><img class="avatar" src="https://avatars.githubusercontent.com/u/157930541?v=4" alt="Foto de perfil de João Henrique Ferreira" width="42" height="42" fetchpriority="high"><div class="eyebrow"><span class="pulse"></span> Desenvolvedor full stack</div></div>
+        <div class="intro-label"><img class="avatar" src="https://avatars.githubusercontent.com/u/157930541?v=4" alt="Foto de perfil de João Henrique Ferreira" width="42" height="42" fetchpriority="high"><div class="eyebrow"><span class="pulse"></span> Desenvolvedor Front-End Júnior</div></div>
         <h1>Interfaces claras. <em>Sistemas que funcionam.</em></h1>
-        <p class="lead">Sou João Henrique Ferreira, desenvolvedor front end em formação. Trabalho com JavaScript e React na construção de interfaces responsivas e também desenvolvo APIs e aplicações com Node.js.</p>
+        <p class="lead">Sou João Henrique Ferreira, desenvolvedor Front-End Júnior. Crio interfaces responsivas com React e TypeScript e conecto experiências de usuário a APIs REST. Também desenvolvo serviços com Node.js, Express e MongoDB.</p>
         <div class="availability">Aberto a oportunidades</div>
-        <div class="actions"><a class="button" href="#projetos">Ver projetos <span class="arrow">↘</span></a><a class="text-link" href="https://linkedin.com/in/ferreiraj0ao" target="_blank" rel="noreferrer">Fale comigo no LinkedIn ↗</a></div>
+        <div class="actions"><a class="button" href="#projetos">Ver projetos <span class="arrow">↘</span></a><a class="button button-secondary" href="./media/cv-joao-henrique-ferreira.pdf" download aria-label="Baixar currículo de João Henrique Ferreira em PDF">Baixar currículo <span class="arrow" aria-hidden="true">↓</span></a><a class="text-link" href="https://linkedin.com/in/ferreiraj0ao" target="_blank" rel="noreferrer">Fale comigo no LinkedIn ↗</a></div>
       </div>
       <div class="hero-tools reveal" id="habilidades" aria-label="Tecnologias e ferramentas que uso">
         <div class="hero-tools-heading"><span>COMPETÊNCIAS · LINKEDIN</span><span>Desenvolvimento front-end · JavaScript · React</span></div>
@@ -124,25 +152,21 @@ body{line-height:1.65} .lead{font-size:18px} .section-note,.project-body p,.abou
       <div class="wrap">
         <div class="carousel-head"><div><div class="section-index">01 / SISTEMAS EM DESTAQUE</div><h2 class="section-title">Veja os sistemas em ação.</h2></div><div class="carousel-controls"><button class="carousel-control" id="previousProject" type="button" aria-label="Projeto anterior">←</button><button class="carousel-control" id="nextProject" type="button" aria-label="Próximo projeto">→</button><button class="carousel-control carousel-pause" id="projectPause" type="button" aria-pressed="false" aria-label="Pausar carrossel">Ⅱ <span>pausar</span></button></div></div>
         <p class="section-note" style="max-width:none;margin:-8px 0 22px">Explore as interfaces e conheça o estado de cada projeto. A demonstração interativa está indicada quando disponível.</p>
-        <div class="carousel-track" id="projectTrack" aria-label="Carrossel de projetos" tabindex="0">
+        <div class="carousel-track" id="projectTrack" role="region" aria-roledescription="carrossel" aria-label="Projetos em destaque" tabindex="0">
           <article class="project-card">
-            <div class="project-visual pacefinder"><span class="visual-label">PACEFINDER · MODO DE DEMONSTRAÇÃO</span><video class="project-demo" aria-hidden="true" tabindex="-1" muted playsinline loop preload="none" poster="./media/pacefinder.png?v=d9a8298"><source src="./media/pacefinder-demo.mp4?v=d9a8298" type="video/mp4"></video></div>
-            <div class="project-body"><span class="project-num">FRONT END + API · PROTÓTIPO</span><h3>Pacefinder</h3><p>Protótipo para explorar regiões e gerar percursos caminháveis aproximados, com preferências de distância e terreno. Interface em React e TypeScript integrada a uma API Node.js e Express.</p><div class="prototype-note"><strong>Limites da demonstração:</strong> sugestões e métricas são ilustrativas; as rotas são aproximadas e não avaliam segurança nem altimetria.</div><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Google Maps</span></div><div class="project-actions"><a class="project-link" href="https://github.com/J-Ferre1ra/pacefinder" target="_blank" rel="noreferrer">Ver projeto no GitHub <span>↗</span></a><span class="tag">MVP</span></div></div>
+            <div class="project-visual pacefinder"><span class="visual-label">PACEFINDER · VÍDEO DE DEMONSTRAÇÃO</span><video class="project-demo" aria-hidden="true" tabindex="-1" muted playsinline loop preload="none" poster="./media/pacefinder-poster.jpg"><source src="./media/pacefinder-demo.mp4?v=d9a8298" type="video/mp4"></video></div>
+            <div class="project-body"><span class="project-num">FRONT-END + API · PROTÓTIPO</span><h3>Pacefinder</h3><p>Protótipo para explorar regiões e gerar percursos caminháveis aproximados, com preferências de distância e terreno. Interface em React e TypeScript integrada a uma API hospedada em Cloudflare Workers; Express é mantido como adaptador local opcional.</p><div class="prototype-note"><strong>Limites da demonstração:</strong> sugestões e métricas são ilustrativas; as rotas são aproximadas e não avaliam segurança nem altimetria.</div><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Cloudflare Workers</span><span class="tag">Google Maps</span><span class="tag">Express local</span></div><div class="project-actions"><a class="project-link" href="https://pacefinder.programation-077.workers.dev/" target="_blank" rel="noreferrer">Abrir demonstração <span>↗</span></a><a class="project-link" href="https://github.com/J-Ferre1ra/pacefinder" target="_blank" rel="noreferrer">Ver código <span>↗</span></a></div></div>
           </article>
           <article class="project-card">
-            <div class="project-visual stock"><span class="visual-label">FRONT END · DEMONSTRAÇÃO LOCAL</span><video class="project-demo" aria-hidden="true" tabindex="-1" muted playsinline loop preload="none" poster="./media/estoque.png"><source src="./media/estoquemaster-demo.mp4" type="video/mp4"></video></div>
-            <div class="project-body"><span class="project-num">FRONT END · REACT</span><h3>EstoqueMaster</h3><p>Interface para estoque, vendas e clientes, conectada à API Back-Stock. Busca em tempo real, rotas protegidas e relatórios.</p><div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Axios</span><span class="tag">JWT</span></div><div class="project-actions"><a class="project-link" href="https://github.com/J-Ferre1ra/Front-Stock" target="_blank" rel="noreferrer">Ver código <span>↗</span></a><span class="tag">Interface</span></div></div>
+            <div class="project-visual stock"><span class="visual-label">SISTEMA DE ESTOQUE · CAPTURA LOCAL</span><video class="project-demo" aria-hidden="true" tabindex="-1" muted playsinline loop preload="none" poster="./media/estoque.png"><source src="./media/estoquemaster-demo.mp4" type="video/mp4"></video></div>
+            <div class="project-body"><span class="project-num">PROJETO FREELANCE · FULL STACK</span><h3>Sistema de gestão de estoque</h3><p>Aplicação integrada para produtos, clientes, vendas e reposição. Reúne interface React/Vite e API Node.js/Express com MongoDB, autenticação JWT em cookie HttpOnly, atualização de estoque e relatórios PDF.</p><div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">JWT HttpOnly</span></div><div class="project-actions"><a class="project-link" href="https://github.com/J-Ferre1ra/Front-Stock" target="_blank" rel="noreferrer">Código do front-end <span>↗</span></a><a class="project-link" href="https://github.com/J-Ferre1ra/Back-Stock" target="_blank" rel="noreferrer">Código da API <span>↗</span></a></div></div>
           </article>
           <article class="project-card">
-            <div class="project-visual api" aria-label="Visão geral da API Back-Stock"><span class="visual-label">02 / BACK END</span><div class="mini-code" aria-hidden="true"><div><b>GET</b> /api/produtos</div><div><b>POST</b> /api/transacoes</div><div><b>GET</b> /api/dashboard</div><div style="margin-top:8px;color:#6b89a6">JWT HttpOnly · acesso protegido</div></div></div>
-            <div class="project-body"><span class="project-num">BACK END · API REST</span><h3>Back-Stock</h3><p>API de produtos, clientes, vendas e reposição de estoque, com autenticação por cookie HttpOnly e relatórios em PDF.</p><div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">JWT</span></div><div class="project-actions"><a class="project-link" href="https://github.com/J-Ferre1ra/Back-Stock" target="_blank" rel="noreferrer">Ver código <span>↗</span></a><span class="tag">API</span></div></div>
-          </article>
-          <article class="project-card">
-            <div class="project-visual dashboard"><span class="visual-label">DEMONSTRAÇÃO LOCAL · DADOS DE EXEMPLO</span><video class="project-demo" aria-hidden="true" tabindex="-1" muted playsinline loop preload="none" poster="./media/dashboard.png"><source src="./media/dashboard-financeiro-demo.mp4" type="video/mp4"></video></div>
+            <div class="project-visual dashboard"><span class="visual-label">VÍDEO DE DEMONSTRAÇÃO · DADOS DE EXEMPLO</span><video class="project-demo" aria-hidden="true" tabindex="-1" muted playsinline loop preload="none" poster="./media/dashboard.png"><source src="./media/dashboard-financeiro-demo.mp4" type="video/mp4"></video></div>
             <div class="project-body"><span class="project-num">FRONT END · DEMONSTRAÇÃO AO VIVO</span><h3>Dashboard financeiro</h3><p>Uma aplicação web para acompanhar aportes e dívidas. Abra a demonstração para explorar a interface interativa.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">Dashboard</span><span class="tag">GitHub Pages</span></div><div class="project-actions"><a class="project-link" href="https://j-ferre1ra.github.io/Dashboard-Gestao-Creditos-e-Investimentos/" target="_blank" rel="noreferrer">Abrir demonstração <span>↗</span></a><a class="project-link" href="https://github.com/J-Ferre1ra/Dashboard-Gestao-Creditos-e-Investimentos" target="_blank" rel="noreferrer">Código <span>↗</span></a></div></div>
           </article>
           <article class="project-card">
-            <div class="project-visual portal"><span class="visual-label">INTERFACE REAL · CAPTURA LOCAL</span><video class="project-demo" aria-hidden="true" tabindex="-1" muted playsinline loop preload="none" poster="./media/portal.png"><source src="./media/portal-solicitacoes-demo.mp4" type="video/mp4"></video></div>
+            <div class="project-visual portal"><span class="visual-label">VÍDEO DE DEMONSTRAÇÃO · AMBIENTE LOCAL</span><video class="project-demo" aria-hidden="true" tabindex="-1" muted playsinline loop preload="none" poster="./media/portal.png"><source src="./media/portal-solicitacoes-demo.mp4" type="video/mp4"></video></div>
             <div class="project-body"><span class="project-num">FULL STACK · SISTEMA WEB</span><h3>Portal de solicitações</h3><p>Aplicação para criar, acompanhar e atualizar solicitações, com autenticação, filtros e painel de status.</p><div class="tags"><span class="tag">React</span><span class="tag">Express</span><span class="tag">SQLite</span><span class="tag">Sessões</span></div><div class="project-actions"><a class="project-link" href="https://github.com/J-Ferre1ra/Portal-de-Solicita-Interna." target="_blank" rel="noreferrer">Ver código <span>↗</span></a><span class="tag">Full stack</span></div></div>
           </article>
         </div>
@@ -157,22 +181,23 @@ body{line-height:1.65} .lead{font-size:18px} .section-note,.project-body p,.abou
     </section>
     <section id="sobre" data-reveal>
         <div class="wrap about-grid">
-        <div><div class="section-index">04 / EXPERIÊNCIA</div><div class="about-stamp"><span>João Henrique Ferreira<br><span style="color:var(--muted)">Desenvolvedor full stack</span></span><span class="stamp-icon">J</span></div></div>
-        <div class="about-copy"><p>Atuo com desenvolvimento web desde 2022 e tenho foco em front end, JavaScript, React, interfaces responsivas e integração com APIs REST. Também trabalho com Node.js, Express e MongoDB em projetos full stack.</p><p>Minha trajetória inclui um estágio na Compass UOL e um projeto freelance de gestão de estoque, vendas e clientes. No estágio, tive contato com TypeScript, CSS/Flexbox, Docker, Scrum, AWS, bancos SQL e NoSQL, Git/GitHub e design de interfaces.</p><p>Busco uma oportunidade como desenvolvedor front end júnior para contribuir em projetos reais e continuar evoluindo no ecossistema JavaScript e React.</p></div>
+        <div><div class="section-index">03 / EXPERIÊNCIA EM DESENVOLVIMENTO</div><h2 class="section-title about-heading">Experiência aplicada em projetos web.</h2><div class="about-stamp"><span>João Henrique Ferreira<br><span style="color:var(--muted)">Desenvolvedor Front-End Júnior</span></span><span class="stamp-icon">J</span></div></div>
+        <div class="about-copy"><p class="experience-intro">Tenho foco em interfaces web e integração com APIs REST, com experiência prática em projeto freelance e estágio. Trabalho principalmente com React e TypeScript e também desenvolvo serviços com Node.js.</p><div class="experience-list" aria-label="Experiência em desenvolvimento"><article class="experience-item"><div class="experience-heading"><h3>Desenvolvedor Full Stack · Freelancer</h3><div class="experience-dates"><time datetime="2025-01">Jan 2025</time> - <time datetime="2025-12">Dez 2025</time></div></div><p>Desenvolvi um sistema de gestão de produtos, clientes, estoque e vendas com interface React/Vite e API Node.js/Express/MongoDB. Entreguei autenticação JWT em cookie HttpOnly, atualização automática do estoque, upload de imagens e relatórios PDF.</p><div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span></div></article><article class="experience-item"><div class="experience-heading"><h3>Estagiário de Desenvolvimento · Compass UOL</h3><div class="experience-dates"><time datetime="2024-02">Fev 2024</time> - <time datetime="2024-07">Jul 2024</time></div></div><p>Atuei em atividades de desenvolvimento com React, Redux, React Router, TypeScript e APIs REST em Node.js/Express e MongoDB. Colaborei em ambiente Scrum com Git e Storybook e tive contato com SSR, segurança e AWS.</p><div class="tags"><span class="tag">React</span><span class="tag">Redux</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Scrum</span></div></article></div></div>
       </div>
     </section>
     <section id="contato" style="padding-top:12px" data-reveal>
-      <div class="wrap contact"><div><div class="section-index">05 / CONTATO</div><h2>Vamos conversar sobre uma oportunidade?</h2><p>Estou aberto a oportunidades. Você pode me chamar por e-mail, conversar pelo LinkedIn ou conhecer meu trabalho no GitHub.</p></div><div class="contact-actions"><a class="button" href="mailto:joaoh.constantino@gmail.com?subject=Oportunidade%20de%20trabalho">Enviar e-mail</a><a class="button outline" href="https://linkedin.com/in/ferreiraj0ao" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="button outline" href="https://github.com/J-Ferre1ra" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
+      <div class="wrap contact"><div><div class="section-index">04 / CONTATO</div><h2>Vamos conversar sobre uma oportunidade?</h2><p>Estou aberto a oportunidades. Você pode me chamar por e-mail, conversar pelo LinkedIn ou conhecer meu trabalho no GitHub.</p></div><div class="contact-actions"><a class="button" href="mailto:joaoh.constantino@gmail.com?subject=Oportunidade%20de%20trabalho">Enviar e-mail</a><a class="button outline" href="https://linkedin.com/in/ferreiraj0ao" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="button outline" href="https://github.com/J-Ferre1ra" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
     </section>
   </main>
   <footer class="wrap"><span>© <span id="year"></span> João Henrique Ferreira</span><a href="#inicio">Voltar ao início ↑</a></footer>
   <script>
     const root=document.documentElement;
     const themeButton=document.getElementById('themeToggle');
-    const storedTheme=localStorage.getItem('portfolio-theme');
+    let storedTheme=null;
+    try{storedTheme=localStorage.getItem('portfolio-theme')}catch{}
     if(storedTheme==='dark')root.dataset.theme='dark';
     themeButton.setAttribute('aria-label',root.dataset.theme==='dark'?'Ativar tema claro':'Ativar tema escuro');
-    themeButton.addEventListener('click',()=>{const dark=root.dataset.theme!=='dark';if(dark)root.dataset.theme='dark';else delete root.dataset.theme;localStorage.setItem('portfolio-theme',dark?'dark':'light');themeButton.setAttribute('aria-label',dark?'Ativar tema claro':'Ativar tema escuro')});
+    themeButton.addEventListener('click',()=>{const dark=root.dataset.theme!=='dark';if(dark)root.dataset.theme='dark';else delete root.dataset.theme;try{localStorage.setItem('portfolio-theme',dark?'dark':'light')}catch{}themeButton.setAttribute('aria-label',dark?'Ativar tema claro':'Ativar tema escuro')});
     const track=document.getElementById('projectTrack');
     const cards=Array.from(track.querySelectorAll('.project-card'));
     const previous=document.getElementById('previousProject');
@@ -183,7 +208,7 @@ body{line-height:1.65} .lead{font-size:18px} .section-note,.project-body p,.abou
     const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let carouselPaused=reducedMotion;
     let carouselTimer;
-    cards.forEach((card,index)=>{const dot=document.createElement('button');dot.type='button';dot.className='carousel-dot';dot.setAttribute('aria-label',`Mostrar projeto ${index+1} de ${cards.length}`);dot.setAttribute('aria-current',index===0?'true':'false');dot.addEventListener('click',()=>goTo(index));dots.append(dot)});
+    cards.forEach((card,index)=>{const title=card.querySelector('h3')?.textContent.trim()||`Projeto ${index+1}`;card.setAttribute('role','group');card.setAttribute('aria-roledescription','projeto');card.setAttribute('aria-label',`${title}, ${index+1} de ${cards.length}`);const dot=document.createElement('button');dot.type='button';dot.className='carousel-dot';dot.setAttribute('aria-label',`Mostrar projeto ${index+1} de ${cards.length}: ${title}`);dot.setAttribute('aria-current',index===0?'true':'false');dot.addEventListener('click',()=>goTo(index));dots.append(dot)});
     const dotButtons=Array.from(dots.children);
     function goTo(index){current=(index+cards.length)%cards.length;track.scrollTo({left:cards[current].offsetLeft-track.offsetLeft,behavior:reducedMotion?'auto':'smooth'});updateCarousel()}
     function syncProjectVideos(){cards.forEach((card,index)=>{const video=card.querySelector(".project-demo");if(!video)return;if(index===current&&!carouselPaused&&!document.hidden){video.play().catch(()=>{})}else video.pause()})}function updateCarousel(){const nearest=cards.reduce((best,card,index)=>Math.abs(card.offsetLeft-track.offsetLeft-track.scrollLeft)<Math.abs(cards[best].offsetLeft-track.offsetLeft-track.scrollLeft)?index:best,0);current=nearest;previous.disabled=false;next.disabled=false;dotButtons.forEach((dot,index)=>dot.setAttribute('aria-current',index===current?'true':'false'));syncProjectVideos()}
